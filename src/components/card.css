@@ -1,0 +1,7 @@
+.card {
+    background-color: violet;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;   
+    border-color: white;
+}
