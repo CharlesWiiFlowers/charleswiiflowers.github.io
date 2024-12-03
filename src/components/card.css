@@ -1,7 +1,32 @@
 .card {
-    background-color: violet;
+    display: flex;
+    color: black;
+    background-color: #fcfbfe;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;   
     border-color: white;
+    margin-bottom: 10%;
+    width: 90%;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.div-profile-card {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.card-children {
+    padding: 0%;
+    margin-right: 0%;
+    width: fit-content;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
