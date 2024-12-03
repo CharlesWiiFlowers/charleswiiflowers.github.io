@@ -1,10 +1,11 @@
 import Card from './components/card.tsx';
 import ProfileCard from './components/ProfileCard.tsx';
+import data from "./assets/data.json"
 
 function InfoBody(){
     return (
         <div>
-            < ProfileCard title='Hola' content='' avatarUrl='/avatar.webp'/>
+            < ProfileCard title={data.name} content={data['about-me']} avatarUrl='/avatar.webp'/>
             < Card title="Hola" content=""/>
         </div>)
 }
