@@ -3,9 +3,6 @@ import "./card.css"
 function Card({title, subtitle, content, children}: {title:string, subtitle:string,content:string, children?:React.ReactNode}){
     return (
         <div  className="card">
-            <div className='div-profile-card'>
-                {children && <div className="card-children">{children}</div>}
-            </div>
             <div>
                 <h1>
                     {title}
@@ -17,6 +14,9 @@ function Card({title, subtitle, content, children}: {title:string, subtitle:stri
                     {content == '' ? ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin ligula in purus feugiat porta.") 
                     : (content)}
                 </p>
+            </div>
+            <div className='div-children'>
+                {children && <div className="card-children">{children}</div>}
             </div>
         </div>
     )

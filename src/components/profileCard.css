@@ -1,0 +1,25 @@
+.div-profile-card {
+    display: flex;
+    background-color: #fcfbfe;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;   
+    border-color: white;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    width: 90%;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.image-card {
+    display: flex;
+    width: fit-content;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}

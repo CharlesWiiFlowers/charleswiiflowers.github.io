@@ -1,5 +1,4 @@
 .card {
-    display: flex;
     background-color: #fcfbfe;
     max-width: fit-content;
     margin-left: auto;
@@ -12,21 +11,23 @@
     padding: 5px;
 }
 
-.div-profile-card {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-}
-
 .card-children {
-    padding: 0%;
-    margin-right: 0%;
+    display: flex;
     width: fit-content;
 }
 
-.profile-picture {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
+.div-children {
+    display: flex;
+    justify-content: center;
+}
+
+.div-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-image {
+    height: 50px;
+    width: 50px;
 }

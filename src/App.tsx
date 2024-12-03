@@ -1,12 +1,15 @@
 import Card from './components/card.tsx';
 import ProfileCard from './components/ProfileCard.tsx';
+import SkillCard from './components/SkillCard.tsx';
 import data from "./assets/data.json"
 
 function InfoBody(){
     return (
         <div>
-            < ProfileCard title={data.name} subtitle='A software developer' content=' ' avatarUrl='/avatar.webp'/>
+            <i className="devicon-arduino-plain-wordmark colored"></i>
+            < ProfileCard title={data.name} subtitle='A software developer' avatarUrl='/avatar.webp'/>
             < Card title='About me' subtitle='' content={data['about-me']}/>
+            < SkillCard title='My skills' data={data['skill-list']}/>
         </div>)
 }
 
