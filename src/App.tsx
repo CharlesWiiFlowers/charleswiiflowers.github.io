@@ -1,11 +1,16 @@
 import Card from './components/card.tsx';
+import ProfileCard from './components/ProfileCard.tsx';
 
 function InfoBody(){
-    return < Card title="Hola" content=""/>
+    return (
+        <div>
+            < ProfileCard title='Hola' content='' avatarUrl='/avatar.webp'/>
+            < Card title="Hola" content=""/>
+        </div>)
 }
 
 function SwitchHeader(){
-    return < Card title="Hello" content="What's up world?" />
+    return <div></div>
 }
 
 function ContentPage(){
