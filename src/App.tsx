@@ -5,8 +5,8 @@ import data from "./assets/data.json"
 function InfoBody(){
     return (
         <div>
-            < ProfileCard title={data.name} content={data['about-me']} avatarUrl='/avatar.webp'/>
-            < Card title="Hola" content=""/>
+            < ProfileCard title={data.name} subtitle='A software developer' content=' ' avatarUrl='/avatar.webp'/>
+            < Card title='About me' subtitle='' content={data['about-me']}/>
         </div>)
 }
 
