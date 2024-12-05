@@ -11,8 +11,7 @@ function Card({title, subtitle, content, children}: {title:string, subtitle:stri
                     {subtitle}
                 </h2>
                 <p>
-                    {content == '' ? ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin ligula in purus feugiat porta.") 
-                    : (content)}
+                    {content}
                 </p>
             </div>
             <div className='div-children'>

@@ -1,18 +1,27 @@
 .card {
     background-color: #fcfbfe;
+    border-color: #fcfbfe;
+    border-radius: 20px;
     max-width: 90%;
+    width: fit-content;
     margin-left: auto;
-    margin-right: auto;   
-    border-color: white;
+    margin-right: auto;
     margin-bottom: 10%;
     margin-top: 10%;
-    padding: 10px;
-    width: fit-content;
-    border-radius: 20px;
+    padding: 5px;
+}
+.div-image {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.card-children {
-    width: fit-content;
+.skill-image {
+    height: 60px;
+    width: 60px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .div-children {
@@ -20,15 +29,29 @@
     justify-content: center;
 }
 
-.div-image {
-    display:flex;
-    align-items: center;
+.div-social {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
-.skill-image {
-    height: 70px;
-    width: 70px;
-    margin-left: 4px;
-    margin-right: 4px;
+@media (min-width: 800px) {
+    .card {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;   
+        padding: 10px;
+    }
+    
+    /*.card-children {
+    
+    }*/
+    .skill-image {
+        height: 70px;
+        width: 70px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    
 }

@@ -1,11 +1,10 @@
 import Card from './card.tsx';
-import './profileCard.css'
 
 function SkillCard({title, data}:
         {title: string, data: Array<object>}){
 
-        let language_row: string[] = []
-        let techology_row: string[] = []
+        let language_row: string[] = [];
+        let techology_row: string[] = [];
 
         data.forEach(element => {
             if(element.category == "languages"){language_row.push(element.source)}
@@ -13,7 +12,7 @@ function SkillCard({title, data}:
         });
 
         return (
-            <Card title={title} subtitle='' content=' '>
+            <Card title={title} subtitle='' content=''>
                 <div className='div-languages'>
                     <h2>Languages</h2>
                     <div className='div-image'>
