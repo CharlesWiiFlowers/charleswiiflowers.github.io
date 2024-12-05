@@ -26,5 +26,11 @@
         {"category": "technologies", "name": "PyPI", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pypi/pypi-original.svg"},
         {"category": "technologies", "name": "Vite", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"},
         {"category": "technologies", "name": "VSCode", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"}
+    ],
+    "social-media": [
+        {"name": "Twitter/X", "title": "My Twitter/X profile!!", "link": "https://twitter.com/WiiFlowers", "source": "/x_logo_black.webp"},
+        {"name": "Discord", "title": "My Discord profile :3", "link": "https://discord.com/users/728721100862914690", "source": "/discord-mark-blue.svg"},
+        {"name": "Twitch", "title": "Oh, this could be my Twitch channel!!", "link": "https://www.twitch.tv/carloscuack_", "source": "/glitch_flat_purple.svg"},
+        {"name": "GitHub", "title": "My GitHub's repositories", "link": "https://github.com/CharlesWiiFlowers", "source": "/github-mark.svg"}
     ]
 }
