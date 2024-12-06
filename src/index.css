@@ -29,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -58,7 +59,8 @@ p {
 }
 
 i {
-  font-size: 50px;
+  font-size: 30px;
+  margin-right: 5px;
 }
 
 button {
