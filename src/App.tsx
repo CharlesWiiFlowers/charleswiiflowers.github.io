@@ -9,7 +9,7 @@ function InfoBody(){
     return (
         <div>
             <i className="devicon-arduino-plain-wordmark colored"></i>
-            < ProfileCard title={data.name} subtitle='A software developer' avatarUrl='/avatar.webp'/>
+            < ProfileCard title={data.name} subtitle='A software developer' avatarUrl={data['avatar-url']}/>
             < Card title='About me' subtitle='' content={data['about-me']}/>
             < SkillCard title='My skills' data={data['skill-list']}/>
             < ProjectCard title='My project' data={data['project-list']} />
