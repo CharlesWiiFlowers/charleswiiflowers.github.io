@@ -3,25 +3,26 @@ import ProfileCard from './components/ProfileCard.tsx';
 import SkillCard from './components/SkillCard.tsx';
 import SocialCard from './components/SocialCard.tsx';
 import ProjectCard from './components/ProjectCard.tsx';
+import ParticlesBg from './components/ParticlesBg.tsx';
 import data from "./assets/data.json"
 
-function InfoBody(){
+function InfoBody() {
     return (
         <div>
             <i className="devicon-arduino-plain-wordmark colored"></i>
-            < ProfileCard title={data.name} subtitle='A software developer' avatarUrl={data['avatar-url']}/>
-            < Card title='About me' subtitle='' content={data['about-me']}/>
-            < SkillCard title='My skills' data={data['skill-list']}/>
+            < ProfileCard title={data.name} subtitle='A software developer' avatarUrl={data['avatar-url']} />
+            < Card title='About me' subtitle='' content={data['about-me']} />
+            < SkillCard title='My skills' data={data['skill-list']} />
             < ProjectCard title='My project' data={data['project-list']} />
-             < SocialCard title='My socials' data={data['social-media']}/>
+            < SocialCard title='My socials' data={data['social-media']} />
         </div>)
 }
 
-function SwitchHeader(){
+function SwitchHeader() {
     return <div></div>
 }
 
-function ContentPage(){
+function ContentPage() {
     return (
         <div>
             < InfoBody />
@@ -30,10 +31,14 @@ function ContentPage(){
     )
 }
 
-function BodyPage(){
-    return < ContentPage />
+function BodyPage() {
+    return (
+        <div>
+            < ContentPage />
+        </div>
+    )
 }
 
-export default function App(){
-    return < BodyPage />;
+export default function App() {
+    return (<div>< ParticlesBg />< BodyPage /></div>);
 }
