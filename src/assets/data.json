@@ -1,5 +1,5 @@
 {
-    "name": "🚀 [Flowers] 🚀",
+    "name": "🌟 Cosmic Zero 🚀",
     "about-me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies sed massa ut consequat. Nam vestibulum ipsum id justo rhoncus vehicula. Proin nec mi sed mi aliquet vehicula non pulvinar quam. Pellentesque eget quam elit. Aliquam sed tincidunt justo, ac rhoncus lectus. Nullam elementum cursus consequat. Vivamus at ornare tellus.",
     "avatar-url": "https://avatars.githubusercontent.com/u/118225501?v=4",
     "skill-list": [
@@ -12,7 +12,7 @@
         {"category": "languages", "name": "Typescript", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"},
         {"category": "languages", "name": "Python", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"},
         {"category": "languages", "name": "C", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"},
-        {"category": "languages", "name": "C", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"},
+        {"category": "languages", "name": "C++", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"},
         {"category": "technologies", "name": "Git", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"},
         {"category": "technologies", "name": "GitHub", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"},
         {"category": "technologies", "name": "Docker", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg"},
@@ -35,7 +35,6 @@
         {"name": "GitHub", "title": "My GitHub's repositories", "link": "https://github.com/CharlesWiiFlowers", "source": "/github-mark.svg"}
     ],
     "project-list": [
-        {"name": "FileFinder", "content": "A command to find files on your PC using only his name!!","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/FileFinder", "image": "/projects/file_finder.webp", "technologies": ["Rust/devicon-rust-original colored", "VSCode/devicon-vscode-plain colored", "GitHub/devicon-github-original colored"]},
-        {"name": "FileFinder", "content": "A command to find files on your PC using only his name!!","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/FileFinder", "image": "/projects/file_finder.webp", "technologies": ["Rust/devicon-rust-original colored", "VSCode/devicon-vscode-plain colored"]}
+        {"name": "Heimdall", "content": "A group of utils commands for make your life more easy","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/FileFinder", "image": "/projects/file_finder.webp", "technologies": ["Rust/devicon-rust-original colored", "GitHub/devicon-github-original colored"]}
     ]
 }
