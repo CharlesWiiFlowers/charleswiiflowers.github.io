@@ -3,7 +3,7 @@
     max-width: 90%;
     display: flex;
     background-color: #fcfbfe;
-    font-size: small;
+    font-size: x-small;
     justify-content: center;
     padding: 5px;
     border-radius: 20px;
@@ -21,24 +21,36 @@
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
+
+.profile-picture:hover {
+    transform:rotate(360deg);
+}
+
 
 @media (min-width: 800px) {
     .div-profile-card {
-        font-size:large;
+        font-size: large;
         max-width: fit-content;
         margin-left: auto;
-        margin-right: auto;  
+        margin-right: auto;
         border-color: #fcfbfe;
         margin-bottom: 10%;
         margin-top: 10%;
         width: 90%;
         align-items: center;
     }
-    
-    
+
+
     .profile-picture {
         width: 200px;
         height: 200px;
-    }   
+        transition: transform 5s ease-in-out;
+    }
+
+    .profile-picture:hover {
+        transform: rotate(3600deg);
+    }
+
 }

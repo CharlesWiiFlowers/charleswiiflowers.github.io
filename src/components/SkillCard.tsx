@@ -5,10 +5,18 @@ function SkillCard({ title, data }:
 
     const language_row: string[] = [];
     const techology_row: string[] = [];
+    const language_name_row: string[] = [];
+    const technology_name_row: string[] = [];
 
     data.forEach(element => {
-        if (element.category == "languages") { language_row.push(element.source) }
-        if (element.category == "technologies") { techology_row.push(element.source) }
+        if (element.category == "languages") {
+            language_row.push(element.source);
+            language_name_row.push(element.name);
+        }
+        if (element.category == "technologies") {
+            techology_row.push(element.source);
+            technology_name_row.push(element.name);
+        }
     });
 
     return (
@@ -17,7 +25,10 @@ function SkillCard({ title, data }:
                 <h2>Languages</h2>
                 <div className='div-image'>
                     {language_row.map((src, index) => (
-                        <img key={index} src={src} className='skill-image' />
+                        <div className='skill-container'>
+                            <img key={index} src={src} className='skill-image' />
+                            <span className='skill-name'>{language_name_row[index]}</span>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -25,8 +36,9 @@ function SkillCard({ title, data }:
                 <h2>Technologies</h2>
                 <div className='div-image'>
                     {techology_row.map((src, index) => (
-                        <div className={'div' + index.toString()}>
+                        <div className="skill-container">
                             <img key={index} src={src} className='skill-image' />
+                            <span className='skill-name'>{technology_name_row[index]}</span>
                         </div>
                     ))}
                 </div>
