@@ -1,6 +1,12 @@
 import Card from './card';
 
-function SocialCard({title, data}: {title:string, data:Array<object>}){
+interface dataSocial {
+    link:string,
+    title:string,
+    source:string
+}
+
+function SocialCard({title, data}: {title:string, data:Array<dataSocial>}){
 
     return (
         <Card title={title} subtitle='' content=''>
