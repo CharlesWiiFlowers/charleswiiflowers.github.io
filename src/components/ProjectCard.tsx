@@ -1,10 +1,19 @@
 import Card from "./card";
 
+interface dataProject {
+    name:string,
+    content:string,
+    platform:string,
+    link:string,
+    image:string,
+    technologies: Array<string>
+}
+
 {/*Aspect of data array in json:
     {"name": "title of the project", "content": "what's the project","platform": "platform/icon", "link": "project's link", "image": "image path", "technologies": ["tag/icon tag"]}
     
     icon example: devicon-vscode-plain colored from https://devicon.dev/ declared on <head/> on index.html*/}
-function ProjectCard({title, data}: {title:string, data:Array<object>}){
+function ProjectCard({title, data}: {title:string, data:Array<dataProject>}){
     if(data.length == 0){
         return <div></div>
     } else {

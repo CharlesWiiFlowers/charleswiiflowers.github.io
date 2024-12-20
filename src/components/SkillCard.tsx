@@ -1,7 +1,13 @@
 import Card from './card.tsx';
 
+interface dataSkill {
+    category:string,
+    source:string,
+    name:string
+}
+
 function SkillCard({ title, data }:
-    { title: string, data: Array<object> }) {
+    { title: string, data: Array<dataSkill> }) {
 
     const language_row: string[] = [];
     const techology_row: string[] = [];
