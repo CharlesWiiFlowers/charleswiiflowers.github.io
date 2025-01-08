@@ -35,6 +35,6 @@
         {"name": "GitHub", "title": "My GitHub's repositories", "link": "https://github.com/CharlesWiiFlowers", "source": "/social/github-mark.svg"}
     ],
     "project-list": [
-        {"name": "Heimdall", "content": "A group of utils commands for make your life more easy","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/Heimdall", "image": "/projects/heimdall.webp", "technologies": ["Rust/devicon-rust-original colored", "GitHub/devicon-github-original colored"]}
+        {"name": "Heimdall", "content": "A group of utils commands to make your life more easy","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/Heimdall", "image": "/projects/heimdall.webp", "technologies": ["Rust/devicon-rust-original colored", "GitHub/devicon-github-original colored"]}
     ]
 }
