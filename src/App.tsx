@@ -4,6 +4,7 @@ import SkillCard from './components/SkillCard.tsx';
 import SocialCard from './components/SocialCard.tsx';
 import ProjectCard from './components/ProjectCard.tsx';
 import ParticlesBg from './components/ParticlesBg.tsx';
+import Footer from './components/Footer.tsx';
 import data from "./assets/data.json"
 
 function InfoBody() {
@@ -39,5 +40,5 @@ function BodyPage() {
 }
 
 export default function App() {
-    return (<div>< ParticlesBg />< BodyPage /></div>);
+    return (<div>< ParticlesBg />< BodyPage />< Footer /></div>);
 }
