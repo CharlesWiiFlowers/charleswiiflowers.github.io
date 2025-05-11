@@ -32,7 +32,8 @@
         {"name": "Twitter/X", "title": "My Twitter/X profile!!", "link": "https://twitter.com/WiiFlowers", "source": "/social/x_logo_black.webp"},
         {"name": "Discord", "title": "My Discord profile :3", "link": "https://discord.com/users/728721100862914690", "source": "/social/discord-mark-blue.svg"},
         {"name": "Twitch", "title": "Oh, this could be my Twitch channel!!", "link": "https://www.twitch.tv/carloscuack_", "source": "/social/glitch_flat_purple.svg"},
-        {"name": "GitHub", "title": "My GitHub's repositories", "link": "https://github.com/CharlesWiiFlowers", "source": "/social/github-mark.svg"}
+        {"name": "GitHub", "title": "My GitHub's repositories", "link": "https://github.com/CharlesWiiFlowers", "source": "/social/github-mark.svg"},
+        {"name": "Bluesky", "title": "My Bluesky profile!", "link": "https://bsky.app/profile/wiiflowers.bsky.social", "source": "/social/bluesky"}
     ],
     "project-list": [
         {"name": "Heimdall", "content": "A group of utils commands to make your life more easy","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/Heimdall", "image": "/projects/heimdall.webp", "technologies": ["Rust/devicon-rust-original colored", "GitHub/devicon-github-original colored"]}

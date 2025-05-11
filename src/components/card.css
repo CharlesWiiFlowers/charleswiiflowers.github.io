@@ -79,18 +79,18 @@
 }
 
 .image-project {
-    height: 300px;
-    width: 300px;
+    height: 100px;
+    width: 100px;
     border-radius: 30px;
 }
 
 .project-title-text {
-    font-size: 40px;
+    font-size: 30px;
     color: #a11d0d;
 }
 
 .project-content-text {
-    font-size: 25px;
+    font-size: 20px;
     color: #0c164f;
 }
 
@@ -138,12 +138,12 @@
     .div-project {
         max-width: 100%;
         width: fit-content;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         overflow: auto;
     }
 
     .div-project-inside-link {
-        max-width: 300px;
+        max-width: 500px;
         margin-right: 30px;
         margin-left: 30px;
         margin-top: 10px;
