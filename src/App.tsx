@@ -4,6 +4,7 @@ import SkillCard from './components/SkillCard.tsx';
 import SocialCard from './components/SocialCard.tsx';
 import ProjectCard from './components/ProjectCard.tsx';
 import ParticlesBg from './components/ParticlesBg.tsx';
+import NavBar from './components/NavBar.tsx';
 import Footer from './components/Footer.tsx';
 import data from "./assets/data.json"
 
@@ -19,14 +20,16 @@ function InfoBody() {
 }
 
 function SwitchHeader() {
-    return <div></div>
+    return <div>
+        <NavBar ></NavBar>
+    </div>
 }
 
 function ContentPage() {
     return (
         <div>
-            < InfoBody />
             < SwitchHeader />
+            < InfoBody />
         </div>
     )
 }
