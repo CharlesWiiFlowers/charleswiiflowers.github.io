@@ -1,5 +1,5 @@
 {
-    "name": "🌟 Cosmic Zero 🚀",
+    "name": "🌟 Flowers  🚀",
     "about-me": "A software developer with experience in desktop development, microcontroller programming. Currently, I'm learning Web Development (both frontend and backend) 🤖. I'm from the Orion Arm of the Milky Way, on a planet commonly called 'Earth' 🌎. By the way I'm Carlos aka Flowers, Cosmic Zero and probably you can find me like Charles (just because I love how it sounds!!). I also enjoy learning music and platformers videogames. Someday I'll go to the moon. 🌒",
     "avatar-url": "https://avatars.githubusercontent.com/u/118225501?v=4",
     "skill-list": [
@@ -33,9 +33,10 @@
         {"name": "Discord", "title": "My Discord profile :3", "link": "https://discord.com/users/728721100862914690", "source": "/social/discord-mark-blue.svg"},
         {"name": "Twitch", "title": "Oh, this could be my Twitch channel!!", "link": "https://www.twitch.tv/carloscuack_", "source": "/social/glitch_flat_purple.svg"},
         {"name": "GitHub", "title": "My GitHub's repositories", "link": "https://github.com/CharlesWiiFlowers", "source": "/social/github-mark.svg"},
-        {"name": "Bluesky", "title": "My Bluesky profile!", "link": "https://bsky.app/profile/wiiflowers.bsky.social", "source": "/social/bluesky"}
+        {"name": "Bluesky", "title": "My Bluesky profile!", "link": "https://bsky.app/profile/wiiflowers.bsky.social", "source": "/social/bluesky.png"}
     ],
     "project-list": [
-        {"name": "Heimdall", "content": "A group of utils commands to make your life more easy","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/Heimdall", "image": "/projects/heimdall.webp", "technologies": ["Rust/devicon-rust-original colored", "GitHub/devicon-github-original colored"]}
+        {"name": "Lunae", "content": "The experimental bot only for you.","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/LunaeDiscord", "image": "/projects/lunae.webp", "technologies": ["Python/devicon-python-plain colored", "GitHub/devicon-github-original colored"]},
+        {"name": "Heimdall", "content": "A group of utils commands to make your life more easy.","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/Heimdall", "image": "/projects/heimdall.webp", "technologies": ["Rust/devicon-rust-original colored", "GitHub/devicon-github-original colored"]}
     ]
 }
