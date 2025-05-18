@@ -23,7 +23,7 @@ function ProjectCard({title, data}: {title:string, data:Array<dataProject>}){
                     {data.map((value, index) => (
                         <a className={"link-" + index.toString()} href={value.link} target='_blank' rel="noopener noreferrer" title={"Open " + value.name + " project!"} key={index}>
                             <div className="div-project-inside-link">
-                                <div>
+                                <div className="div-image-project">
                                     <img className="image-project" src={value.image}/>
                                 </div>
                                 <div>
