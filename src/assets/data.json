@@ -23,7 +23,7 @@
         {"category": "technologies", "name": "TensorFlow", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"},
         {"category": "technologies", "name": "Trello", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg"},
         {"category": "technologies", "name": "Gradle", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"},
-        {"category": "technologies", "name": "Kivy", "source": "https://static-00.iconduck.com/assets.00/kivy-icon-512x512-41zkuqa6.png"},
+        {"category": "technologies", "name": "Kivy", "source": "https://images.icon-icons.com/2148/PNG/512/kivy_icon_132265.png"},
         {"category": "technologies", "name": "PyPI", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pypi/pypi-original.svg"},
         {"category": "technologies", "name": "Vite", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"},
         {"category": "technologies", "name": "VSCode", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"}
@@ -36,6 +36,7 @@
         {"name": "GitHub", "title": "My GitHub's repositories", "link": "https://github.com/CharlesWiiFlowers", "source": "/social/github-mark.svg"}
     ],
     "project-list": [
+        {"name": "MikuPet", "content": "A virtual desktop pet like Shimeji inspired by Hatsune Miku.","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/MikuPet", "image": "/projects/mikupet.webp", "technologies": ["Python/devicon-python-plain colored", "GitHub/devicon-github-original colored"]},
         {"name": "Lunae", "content": "The experimental bot only for you.","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/LunaeDiscord", "image": "/projects/lunae.webp", "technologies": ["Python/devicon-python-plain colored", "GitHub/devicon-github-original colored"]},
         {"name": "Heimdall", "content": "A group of utils commands to make your life more easy.","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/Heimdall", "image": "/projects/heimdall.webp", "technologies": ["Rust/devicon-rust-original colored", "GitHub/devicon-github-original colored"]}
     ]
