@@ -19,6 +19,7 @@
         {"category": "technologies", "name": "MySQL", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"},
         {"category": "technologies", "name": "SQLite", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original-wordmark.svg"},
         {"category": "technologies", "name": "NPM", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"},
+        {"category": "technologies", "name": "Spring", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"},
         {"category": "technologies", "name": "React", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"},
         {"category": "technologies", "name": "TensorFlow", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"},
         {"category": "technologies", "name": "Trello", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg"},
@@ -36,8 +37,6 @@
         {"name": "GitHub", "title": "My GitHub's repositories", "link": "https://github.com/CharlesWiiFlowers", "source": "/social/github-mark.svg"}
     ],
     "project-list": [
-        {"name": "MikuPet", "content": "A virtual desktop pet like Shimeji inspired by Hatsune Miku.","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/MikuPet", "image": "/projects/mikupet.webp", "technologies": ["Python/devicon-python-plain colored", "GitHub/devicon-github-original colored"]},
-        {"name": "Lunae", "content": "The experimental bot only for you.","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/LunaeDiscord", "image": "/projects/lunae.webp", "technologies": ["Python/devicon-python-plain colored", "GitHub/devicon-github-original colored"]},
-        {"name": "Heimdall", "content": "A group of utils commands to make your life more easy.","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/Heimdall", "image": "/projects/heimdall.webp", "technologies": ["Rust/devicon-rust-original colored", "GitHub/devicon-github-original colored"]}
-    ]
+        {"name": "MikuPet", "content": "A virtual desktop pet like Shimeji inspired by Hatsune Miku.","platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/MikuPet", "image": "/projects/mikupet.webp", "technologies": ["Python/devicon-python-plain colored", "GitHub/devicon-github-original colored"]}
+        ]
 }
