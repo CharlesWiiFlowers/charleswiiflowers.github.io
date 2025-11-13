@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fcfbfe;
+    background-color: #14213D;
     border-radius: 10px;
     margin-bottom: 30px;
     font-style: bold;
@@ -23,9 +23,9 @@
 }
 
 .select-theme {
-    background-color: #fcfbfe;
-    color: #5643fd;
-    border-color: #fcfbfe;
+    background-color: #14213D;
+    color: #E5E5E5;
+    border-color: #14213D;
     font-size: 90%;
     font-style: bold;
 }

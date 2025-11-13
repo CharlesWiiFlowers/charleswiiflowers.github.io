@@ -43,5 +43,5 @@ function BodyPage() {
 }
 
 export default function App() {
-    return (<div>< ParticlesBg />< BodyPage />< Footer /></div>);
+    return (<div>< ParticlesBg color='#000000' />< BodyPage />< Footer /></div>);
 }

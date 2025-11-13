@@ -33,7 +33,7 @@
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(161, 29, 13, 0.8);
+    background-color: #1d1135;
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -96,12 +96,12 @@
 
 .project-title-text {
     font-size: 30px;
-    color: #a11d0d;
+    color: #FCA311;
 }
 
 .project-content-text {
     font-size: 20px;
-    color: #0c164f;
+    color: #14213D;
 }
 
 .tags {
@@ -115,7 +115,7 @@
     display: flex;
     width: 40%;
     margin-right: 10px;
-    background-color: #c9d3d3;
+    background-color: #14213D;
     align-items: center;
     justify-content: center;
     border-radius: 3px;
@@ -124,7 +124,7 @@
 }
 
 .item-tag-name {
-    color: #5643fd;
+    color: #E5E5E5;
 }
 
 @media (min-width: 800px) {

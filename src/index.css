@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #ffffffde;
   background-color: #1d1135;
 
   font-synthesis: none;
@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #E5E5E5;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #E5E5E5;
 }
 
 body {
@@ -36,25 +36,25 @@ h1 {
   font-size: 3.5em;
   line-height: 0.9;
   text-align: center;
-  color: #0d47a1;
+  color: #FCA311;
   margin-bottom: 0%;
 }
 
 h2 {
   font-size: 2.5em;
-  color: #a11d0d;
+  color: #14213D;
   text-align: center;
 }
 
 h3 {
   font-size: 2.5em;
   text-align: center;
-  color:#5643fd;
+  color:#000000;
 }
 
 p {
   font-size: large;
-  color:#0c164f;
+  color:#000000;
   text-align: center;
 }
 
@@ -75,7 +75,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #000000;
 }
 
 button:focus,

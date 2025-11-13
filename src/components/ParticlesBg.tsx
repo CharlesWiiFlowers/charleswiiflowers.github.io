@@ -12,7 +12,7 @@ import {
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-const App = () => {
+const App = (color:string) => {
   const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
@@ -38,7 +38,7 @@ const App = () => {
     () => ({
       background: {
         color: {
-          value: "#0d47a1",
+          value: color,
         },
       },
       fpsLimit: 120,
@@ -102,7 +102,7 @@ const App = () => {
       },
       detectRetina: true,
     }),
-    [],
+    [color],
   );
 
   if (init) {
@@ -118,8 +118,8 @@ const App = () => {
   return <></>;
 };
 
-function ParticlesBg(){
-  return <div className="particles-bg">{App()}</div>
+function ParticlesBg({color}: {color:string}){
+  return <div className="particles-bg">{App(color)}</div>
 }
 
 export default ParticlesBg
