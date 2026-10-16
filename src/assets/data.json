@@ -1,45 +1,286 @@
+
 {
-    "name": "🌟 Flowers  🚀",
-    "about-me": "A software developer with experience in desktop development, microcontroller programming. Currently, I'm learning Web Development (both frontend and backend) 🤖. I'm from the Orion Arm of the Milky Way, on a planet commonly called 'Earth' 🌎. By the way I'm Carlos aka Flowers, Cosmic Zero and probably you can find me like Charles (just because I love how it sounds!!). I also enjoy learning music and platformers videogames. Someday I'll go to the moon. 🌒",
-    "avatar-url": "https://avatars.githubusercontent.com/u/118225501?v=4",
-    "skill-list": [
-        {"category": "hardware", "name": "Arduino", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original-wordmark.svg"},
-        {"category": "languages", "name": "CSS", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"},
-        {"category": "languages", "name": "Javascript", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"},
-        {"category": "languages", "name": "HTML", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"},
-        {"category": "languages", "name": "Java", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"},
-        {"category": "languages", "name": "Rust", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"},
-        {"category": "languages", "name": "Typescript", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"},
-        {"category": "languages", "name": "Python", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"},
-        {"category": "languages", "name": "C", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"},
-        {"category": "languages", "name": "C++", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"},
-        {"category": "technologies", "name": "Git", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"},
-        {"category": "technologies", "name": "GitHub", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"},
-        {"category": "technologies", "name": "Docker", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg"},
-        {"category": "technologies", "name": "MySQL", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"},
-        {"category": "technologies", "name": "SQLite", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original-wordmark.svg"},
-        {"category": "technologies", "name": "NPM", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"},
-        {"category": "technologies", "name": "Spring", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"},
-        {"category": "technologies", "name": "React", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"},
-        {"category": "technologies", "name": "TensorFlow", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"},
-        {"category": "technologies", "name": "Trello", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg"},
-        {"category": "technologies", "name": "Gradle", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"},
-        {"category": "technologies", "name": "Kivy", "source": "https://images.icon-icons.com/2148/PNG/512/kivy_icon_132265.png"},
-        {"category": "technologies", "name": "PyPI", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pypi/pypi-original.svg"},
-        {"category": "technologies", "name": "Vite", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"},
-        {"category": "technologies", "name": "VSCode", "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"}
+  "name": "🌟 Flowers 🚀",
+  "avatar-url": "https://avatars.githubusercontent.com/u/118225501?v=4",
+  "hero": {
+    "eyebrow": "Cosmic Place · personal portfolio",
+    "name": "Carlos “Flowers”",
+    "role": "Software developer · robotics, electronics & AI",
+    "tagline": "I build software and explore the intersection of hardware, robotics, science, and space. Off the keyboard: music, art, anime, and platformer games.",
+    "location": "Orion Arm of the Milky Way · a planet commonly called Earth 🌎",
+    "interests": [
+      "Software",
+      "Robotics",
+      "Electronics",
+      "AI & local-first systems",
+      "Space & science",
+      "Music & art",
+      "Anime & games"
     ],
-    "social-media": [
-        {"name": "Bluesky", "title": "My Bluesky profile!", "link": "https://bsky.app/profile/wiiflowers.bsky.social", "source": "/social/bluesky.png"},
-        {"name": "Twitter/X", "title": "My Twitter/X profile!!", "link": "https://twitter.com/WiiFlowers", "source": "/social/x_logo_black.webp"},
-        {"name": "Discord", "title": "My Discord profile :3", "link": "https://discord.com/users/728721100862914690", "source": "/social/discord-mark-blue.svg"},
-        {"name": "Twitch", "title": "Oh, this could be my Twitch channel!!", "link": "https://www.twitch.tv/carloscuack_", "source": "/social/glitch_flat_purple.svg"},
-        {"name": "GitHub", "title": "My GitHub's repositories", "link": "https://github.com/CharlesWiiFlowers", "source": "/social/github-mark.svg"}
-    ],
-    "currently-exploring": [
-        "Web development, frontend and backend"
-    ],
-    "project-list": [
-        {"name": "MikuPet", "content": "A virtual desktop pet like Shimeji inspired by Hatsune Miku.", "category": "Desktop buddy", "platform": "GitHub/devicon-github-original colored", "link": "https://github.com/CharlesWiiFlowers/MikuPet", "links": {"repository": "https://github.com/CharlesWiiFlowers/MikuPet"}, "image": "/projects/mikupet.webp", "technologies": ["Python/devicon-python-plain colored", "GitHub/devicon-github-original colored"]}
-        ]
+    "actions": [
+      {
+        "label": "View projects",
+        "href": "#projects",
+        "variant": "primary"
+      },
+      {
+        "label": "About me",
+        "href": "#about",
+        "variant": "ghost"
+      }
+    ]
+  },
+  "about-me": "I'm a software developer and Mechatronics & Robotics Engineering student interested in building systems that connect software, hardware, and science. From local-first AI assistants to desktop applications and space engineering, I enjoy exploring how things work and turning ideas into practical projects. I'm Flowers, also known as Charles or Cosmic Zero, somewhere in the Orion Arm of the Milky Way. Outside of engineering, I enjoy music, anime, and platformer games. Someday, I'll make it to the Moon. 🌒",
+  "skill-list": [
+    {
+      "category": "hardware",
+      "name": "Arduino",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original-wordmark.svg"
+    },
+    {
+      "category": "languages",
+      "name": "CSS",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+    },
+    {
+      "category": "languages",
+      "name": "JavaScript",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    },
+    {
+      "category": "languages",
+      "name": "HTML",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+    },
+    {
+      "category": "languages",
+      "name": "Java",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+    },
+    {
+      "category": "languages",
+      "name": "Rust",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
+    },
+    {
+      "category": "languages",
+      "name": "TypeScript",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+    },
+    {
+      "category": "languages",
+      "name": "Python",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+    },
+    {
+      "category": "languages",
+      "name": "C",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+    },
+    {
+      "category": "languages",
+      "name": "C++",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+    },
+    {
+      "category": "engineering",
+      "name": "SOLIDWORKS",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/solidworks/solidworks-original.svg"
+    },
+    {
+      "category": "engineering",
+      "name": "MATLAB",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "Git",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "GitHub",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "Docker",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "MySQL",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "SQLite",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original-wordmark.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "npm",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "Spring",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "React",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "TensorFlow",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "Trello",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "Gradle",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "Kivy",
+      "source": "https://images.icon-icons.com/2148/PNG/512/kivy_icon_132265.png"
+    },
+    {
+      "category": "technologies",
+      "name": "PyPI",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pypi/pypi-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "Vite",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "VS Code",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "Ollama",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ollama/ollama-original.svg"
+    },
+    {
+      "category": "technologies",
+      "name": "Supabase",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
+    },
+    {
+      "category": "tools",
+      "name": "Postman",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+    },
+    {
+      "category": "tools",
+      "name": "WSL",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+    },
+    {
+      "category": "tools",
+      "name": "Wireshark",
+      "source": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wireshark/wireshark-original.svg"
+    }
+  ],
+  "social-media": [
+    {
+      "name": "Bluesky",
+      "title": "My Bluesky profile!",
+      "link": "https://bsky.app/profile/wiiflowers.bsky.social",
+      "source": "/social/bluesky.png"
+    },
+    {
+      "name": "Twitter/X",
+      "title": "My Twitter/X profile!",
+      "link": "https://twitter.com/WiiFlowers",
+      "source": "/social/x_logo_black.webp"
+    },
+    {
+      "name": "Discord",
+      "title": "My Discord profile :3",
+      "link": "https://discord.com/users/728721100862914690",
+      "source": "/social/discord-mark-blue.svg"
+    },
+    {
+      "name": "Twitch",
+      "title": "Oh, this could be my Twitch channel!",
+      "link": "https://www.twitch.tv/carloscuack_",
+      "source": "/social/glitch_flat_purple.svg"
+    },
+    {
+      "name": "GitHub",
+      "title": "My GitHub repositories",
+      "link": "https://github.com/CharlesWiiFlowers",
+      "source": "/social/github-mark.svg"
+    }
+  ],
+  "currently-exploring": [
+    "Local-first AI and modular assistant architectures",
+    "Project management and group gestion",
+    "Robotics, embedded systems, and space engineering"
+  ],
+  "project-list": [
+    {
+      "name": "Mission CAREY",
+      "content": "A CubeSat mission contributing to the development of space engineering capabilities in El Salvador. My work focuses on power-budget estimation and payload integration, including subsystem power requirements and operational-mode analysis.",
+      "category": "Space Engineering",
+      "featured": true,
+      "status": "In development",
+      "role": "Power budget and payload integration contributor",
+      "technologies": [
+        "Systems Engineering",
+        "Power Budget Analysis",
+        "Python"
+      ],
+      "links": {},
+      "disclaimer": "Collaborative project. Public technical details are subject to project authorization."
+    },
+    {
+      "name": "J.A.R.V.I.S.",
+      "content": "A modular, local-first AI assistant designed as a persistent local service. Built around Ollama, automatic tool discovery, an event-driven architecture, and a plugin-first philosophy.",
+      "category": "Local AI & Software Architecture",
+      "featured": true,
+      "status": "Alpha / Active development",
+      "role": "Creator and developer",
+      "link": "https://github.com/CharlesWiiFlowers/JARVIS",
+      "links": {
+        "repository": "https://github.com/CharlesWiiFlowers/JARVIS"
+      },
+      "technologies": [
+        "Python",
+        "Ollama",
+        "Event-Driven Architecture",
+        "Function Calling"
+      ],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "MikuPet",
+      "content": "A virtual desktop companion inspired by Shimeji and Hatsune Miku, combining desktop interaction, Python development, and a playful visual identity.",
+      "category": "Desktop Application",
+      "status": "Personal project",
+      "role": "Creator and developer",
+      "platform": "GitHub/devicon-github-original colored",
+      "link": "https://github.com/CharlesWiiFlowers/MikuPet",
+      "links": {
+        "repository": "https://github.com/CharlesWiiFlowers/MikuPet"
+      },
+      "image": "/projects/mikupet.webp",
+      "technologies": [
+        "Python/devicon-python-plain colored",
+        "GitHub/devicon-github-original colored"
+      ]
+    }
+  ]
 }
