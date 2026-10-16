@@ -1,41 +1,54 @@
 import "./profileCard.css";
 
-interface HeroProps {
+export interface HeroAction {
+  label: string;
+  href: string;
+  variant: string;
+}
+
+export interface HeroData {
+  eyebrow: string;
   name: string;
   role: string;
   tagline: string;
-  avatarUrl: string;
   location: string;
   interests: string[];
+  actions: HeroAction[];
 }
 
-function ProfileCard({ name, role, tagline, avatarUrl, location, interests }: HeroProps) {
+function actionClass(variant: string): string {
+  return variant === "primary" ? "btn btn-primary" : "btn btn-ghost";
+}
+
+function ProfileCard({ hero, avatarUrl }: { hero: HeroData | undefined; avatarUrl: string }) {
+  if (!hero) {
+    return null;
+  }
   return (
     <section id="top" className="hero" aria-labelledby="hero-title">
       <div className="hero-text">
-        <p className="hero-eyebrow">Cosmic Place · personal portfolio</p>
+        <p className="hero-eyebrow">{hero.eyebrow}</p>
         <h1 id="hero-title" className="hero-title">
-          {name}
+          {hero.name}
         </h1>
-        <p className="hero-role">{role}</p>
-        <p className="hero-tagline">{tagline}</p>
-        <p className="hero-location">{location}</p>
+        <p className="hero-role">{hero.role}</p>
+        <p className="hero-tagline">{hero.tagline}</p>
+        <p className="hero-location">{hero.location}</p>
         <ul className="hero-interests" aria-label="Interests">
-          {interests.map((interest) => (
+          {hero.interests.map((interest) => (
             <li key={interest}>{interest}</li>
           ))}
         </ul>
         <div className="hero-actions">
-          <a className="btn btn-primary" href="#projects">
-            View projects
-          </a>
-          <a className="btn btn-ghost" href="#about">
-            About me
-          </a>
+          {hero.actions.map((action) => (
+            <a key={action.label} className={actionClass(action.variant)} href={action.href}>
+              {action.label}
+            </a>
+          ))}
         </div>
       </div>
       <div className="hero-media">
-        <img src={avatarUrl} alt="Profile picture of Carlos, known as Flowers" className="profile-picture" width={200} height={200} />
+        <img src={avatarUrl} alt={`Profile picture of ${hero.name}`} className="profile-picture" width={200} height={200} />
       </div>
     </section>
   );

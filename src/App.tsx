@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import Card from "./components/card.tsx";
-import ProfileCard from "./components/ProfileCard.tsx";
+import ProfileCard, { type HeroData } from "./components/ProfileCard.tsx";
 import SkillCard, { type SkillItem } from "./components/SkillCard.tsx";
 import SocialCard, { type SocialItem } from "./components/SocialCard.tsx";
 import ProjectCard, { type ProjectItem } from "./components/ProjectCard.tsx";
@@ -49,6 +49,7 @@ interface PortfolioData {
   name: string;
   "about-me": string;
   "avatar-url": string;
+  hero: HeroData;
   "skill-list": SkillItem[];
   "social-media": SocialItem[];
   "project-list": ProjectItem[];
@@ -97,14 +98,7 @@ export default function App() {
         onToggleParticles={toggleParticles}
       />
       <main id="main" className="page">
-        <ProfileCard
-          name="Carlos “Flowers”"
-          role="Software developer · desktop, microcontrollers & the web"
-          tagline="I build software and tinker with electronics and robotics, driven by curiosity about science and space. Off the keyboard: music, art, anime and platformer games."
-          avatarUrl={portfolio["avatar-url"]}
-          location="Orion Arm of the Milky Way · a planet commonly called Earth 🌎"
-          interests={["Software", "Robotics", "Electronics", "Space & science", "Music & art", "Anime & games"]}
-        />
+        <ProfileCard hero={portfolio.hero} avatarUrl={portfolio["avatar-url"]} />
         <ProjectCard title="Projects" data={portfolio["project-list"]} />
         <Card id="about" kicker="About" title="About me" content={portfolio["about-me"]} />
         <SkillCard title="Toolkit" data={portfolio["skill-list"]} />
