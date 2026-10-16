@@ -5,6 +5,23 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="icon" type="image/svg+xml" href="/extra/icon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cosmic Place — portfolio of Carlos 'Flowers': software, robotics, science and more." />
+    <meta name="theme-color" content="#140f2e" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("cosmic-place-theme") || "system";
+          var resolved = stored;
+          if (stored === "system" && window.matchMedia) {
+            resolved = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          }
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.style.colorScheme = resolved;
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
     <title>Cosmic place</title>
   </head>
   <body>

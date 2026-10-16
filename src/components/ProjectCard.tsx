@@ -1,64 +1,116 @@
 import Card from "./card";
+import "./ProjectCard.css";
 
-interface dataProject {
-    name:string,
-    content:string,
-    platform:string,
-    link:string,
-    image:string,
-    technologies: Array<string>
+interface ProjectLinks {
+  repository?: string;
+  demo?: string;
+  docs?: string;
 }
 
-{/*Aspect of data array in json:
-    {"name": "title of the project", "content": "what's the project","platform": "platform/icon", "link": "project's link", "image": "image path", "technologies": ["tag/icon tag"]}
-    
-    icon example: devicon-vscode-plain colored from https://devicon.dev/ declared on <head/> on index.html*/}
-function ProjectCard({title, data}: {title:string, data:Array<dataProject>}){
-    if(data.length == 0){
-        return <div></div>
-    } else {
-        return (
-            <Card title={title} subtitle="" content="">
-                <div className="div-project">
-                    {data.map((value, index) => (
-                        <a className={"link-" + index.toString()} href={value.link} target='_blank' rel="noopener noreferrer" title={"Open " + value.name + " project!"} key={index}>
-                            <div className="div-project-inside-link">
-                                <div className="div-image-project">
-                                    <img className="image-project" src={value.image}/>
-                                </div>
-                                <div>
-                                    <h1 className="project-title-text">
-                                        {value.name}
-                                    </h1>
-                                    <h3 className="project-content-text">
-                                        {value.content}
-                                    </h3>
-                                </div>
-                                <div className="tags">
-                                    {value.technologies.map((element:string, dex:number) => {
-                                        const data: string[] = returnNameAndImage(element)
-                                        return (
-                                        <div key={dex} className="item-tag">
-                                            <i className={data[1]}/>
-                                            <p className="item-tag-name">{data[0]}</p>
-                                        </div>)
-                                    })}
-                                </div>
-                            </div>
-                        </a>
-                    ))}
+export interface ProjectItem {
+  name: string;
+  content: string;
+  category?: string;
+  status?: string;
+  platform?: string;
+  link?: string;
+  links?: ProjectLinks;
+  image?: string;
+  technologies?: string[];
+}
+
+function techName(entry: string): string {
+  // Stored as "Name/icon-class"; tolerate plain names too.
+  const cut = entry.indexOf("/");
+  if (cut === -1) {
+    return entry;
+  }
+  return entry.substring(0, cut);
+}
+
+function primaryLink(project: ProjectItem): string | undefined {
+  return project.links?.repository ?? project.links?.demo ?? project.links?.docs ?? project.link;
+}
+
+function linkList(project: ProjectItem): Array<{ label: string; href: string }> {
+  const out: Array<{ label: string; href: string }> = [];
+  if (project.links?.repository) {
+    out.push({ label: "Repository", href: project.links.repository });
+  }
+  if (project.links?.demo) {
+    out.push({ label: "Live demo", href: project.links.demo });
+  }
+  if (project.links?.docs) {
+    out.push({ label: "Docs", href: project.links.docs });
+  }
+  if (out.length === 0 && project.link) {
+    out.push({ label: project.platform ? `Open on ${project.platform.split("/")[0]}` : "Open project", href: project.link });
+  }
+  return out;
+}
+
+function ProjectCard({ title, subtitle, data }: { title: string; subtitle?: string; data: ProjectItem[] }) {
+  if (data.length === 0) {
+    return null;
+  }
+  return (
+    <Card
+      id="projects"
+      kicker="Selected work"
+      title={title}
+      subtitle={subtitle ?? "Things I've built and shared."}
+    >
+      <ul className="project-grid">
+        {data.map((project) => {
+          const href = primaryLink(project);
+          const links = linkList(project);
+          return (
+            <li key={project.name} className="project-card">
+              {project.image && href ? (
+                <a href={href} target="_blank" rel="noopener noreferrer" tabIndex={-1} aria-hidden="true" className="project-media-link">
+                  <img className="project-image" src={project.image} alt="" loading="lazy" />
+                </a>
+              ) : project.image ? (
+                <img className="project-image" src={project.image} alt="" loading="lazy" />
+              ) : null}
+              <div className="project-body">
+                <div className="project-meta">
+                  {project.category && <span className="project-badge">{project.category}</span>}
+                  {project.status && <span className="project-status">{project.status}</span>}
                 </div>
-            </Card>
-        )
-    }
+                <h3 className="project-name">{project.name}</h3>
+                <p className="project-desc">{project.content}</p>
+                {project.technologies && project.technologies.length > 0 && (
+                  <ul className="project-tags" aria-label={`Technologies used in ${project.name}`}>
+                    {project.technologies.map((tech) => (
+                      <li key={tech} className="project-tag">
+                        {techName(tech)}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {links.length > 0 && (
+                  <div className="project-links">
+                    {links.map((item) => (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${item.label} for ${project.name} (opens in a new tab)`}
+                      >
+                        {item.label} ↗
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </Card>
+  );
 }
 
-function returnNameAndImage(text:string): string[] {
-    const number:number = text.search("/");
-    const name = text.substring(0, number);
-    const imageSource = text.substring(number + 1, text.length -1);
-    
-    return [name, imageSource];
-}
-
-export default ProjectCard
+export default ProjectCard;

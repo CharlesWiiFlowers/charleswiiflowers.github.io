@@ -1,33 +1,44 @@
-{/*import Card from './card.tsx';*/}
-import './profileCard.css'
+import "./profileCard.css";
 
-{/*function ProfileCard({title, subtitle,content, avatarUrl}:
-     {title: string, subtitle:string,content:string, avatarUrl:string}){
-
-        return (
-            <Card title={title} subtitle={subtitle} content={content}>
-                <img src={avatarUrl} alt="Profile Picture" className="profile-picture"/>
-            </Card>
-        )
-    }*/}
-
-function ProfileCard({title, subtitle, avatarUrl}: {title:string, subtitle:string, avatarUrl:string}){
-    return (
-        <div className='div-profile-card'>
-            <div className='image-card'>
-                <img src={avatarUrl} alt="Profile Picture" className="profile-picture"/>
-            </div>
-            <div>
-                <h1>
-                    {title}
-                </h1>
-                <h2>
-                    {subtitle}
-                </h2>
-            </div>
-        </div>
-    )
+interface HeroProps {
+  name: string;
+  role: string;
+  tagline: string;
+  avatarUrl: string;
+  location: string;
+  interests: string[];
 }
 
+function ProfileCard({ name, role, tagline, avatarUrl, location, interests }: HeroProps) {
+  return (
+    <section id="top" className="hero" aria-labelledby="hero-title">
+      <div className="hero-text">
+        <p className="hero-eyebrow">Cosmic Place · personal portfolio</p>
+        <h1 id="hero-title" className="hero-title">
+          {name}
+        </h1>
+        <p className="hero-role">{role}</p>
+        <p className="hero-tagline">{tagline}</p>
+        <p className="hero-location">{location}</p>
+        <ul className="hero-interests" aria-label="Interests">
+          {interests.map((interest) => (
+            <li key={interest}>{interest}</li>
+          ))}
+        </ul>
+        <div className="hero-actions">
+          <a className="btn btn-primary" href="#projects">
+            View projects
+          </a>
+          <a className="btn btn-ghost" href="#about">
+            About me
+          </a>
+        </div>
+      </div>
+      <div className="hero-media">
+        <img src={avatarUrl} alt="Profile picture of Carlos, known as Flowers" className="profile-picture" width={200} height={200} />
+      </div>
+    </section>
+  );
+}
 
-export default ProfileCard
+export default ProfileCard;

@@ -1,0 +1,73 @@
+.toolkit-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.toolkit-group {
+  border-top: 1px solid var(--border);
+  padding-top: 1.1rem;
+}
+
+.toolkit-group:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.toolkit-heading {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-align: left;
+}
+
+.toolkit-blurb {
+  margin: 0.2rem 0 0.9rem;
+  font-size: 0.9rem;
+  color: var(--text-faint);
+  text-align: left;
+}
+
+.toolkit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toolkit-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.7rem;
+}
+
+.toolkit-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.toolkit-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+@media (min-width: 800px) {
+  .toolkit-groups {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+  }
+
+  .toolkit-group:nth-child(2) {
+    border-top: none;
+    padding-top: 0;
+  }
+}

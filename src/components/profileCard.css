@@ -1,56 +1,188 @@
-.div-profile-card {
-    flex-wrap: wrap;
-    max-width: 90%;
-    display: flex;
-    background-color: #fcfbfe;
-    font-size: x-small;
-    justify-content: center;
-    padding: 5px;
-    border-radius: 20px;
-    margin-left: 4%;
-    margin-right: auto;
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+  align-items: center;
+  background-color: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: clamp(1.6rem, 5vw, 3rem);
+  margin: clamp(1rem, 4vw, 2.5rem) auto var(--space-section);
+  width: 100%;
+  scroll-margin-top: 5rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.image-card {
-    display: flex;
-    width: fit-content;
+/* Quiet orbital accent — decorative only */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -7rem;
+  right: -7rem;
+  width: 16rem;
+  height: 16rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -3.5rem;
+  right: -3.5rem;
+  width: 9rem;
+  height: 9rem;
+  border: 1px dashed var(--border);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  text-align: left;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  line-height: 1.05;
+  color: var(--text);
+  text-align: left;
+}
+
+.hero-role {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+  font-weight: 600;
+  color: var(--accent-strong);
+  text-align: left;
+}
+
+html[data-theme="dark"] .hero-role {
+  color: var(--accent-strong);
+}
+
+.hero-tagline {
+  margin: 0.9rem 0 0;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  max-width: var(--max-prose);
+  text-align: left;
+}
+
+.hero-location {
+  margin: 0.7rem 0 0;
+  color: var(--text-faint);
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.hero-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+}
+
+.hero-interests li {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1.3rem;
+  font-weight: 650;
+  font-size: 0.98rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+html[data-theme="light"] .btn-primary {
+  color: #fff;
+}
+
+.btn-primary:hover {
+  color: var(--accent-contrast);
+  filter: brightness(1.08);
+}
+
+html[data-theme="light"] .btn-primary:hover {
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.hero-media {
+  display: flex;
+  justify-content: center;
 }
 
 .profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
 }
-
-.profile-picture:hover {
-    transform:rotate(360deg);
-}
-
 
 @media (min-width: 800px) {
-    .div-profile-card {
-        font-size: large;
-        max-width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        border-color: #fcfbfe;
-        margin-bottom: 10%;
-        margin-top: 10%;
-        width: 90%;
-        align-items: center;
-    }
+  .hero {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 2.5rem;
+  }
 
+  .profile-picture {
+    width: 210px;
+    height: 210px;
+  }
+}
 
-    .profile-picture {
-        width: 200px;
-        height: 200px;
-        transition: transform 5s ease-in-out;
-    }
+@media (prefers-reduced-motion: no-preference) {
+  .profile-picture {
+    transition: transform 0.4s ease;
+  }
 
-    .profile-picture:hover {
-        transform: rotate(3600deg);
-    }
-
+  .profile-picture:hover {
+    transform: scale(1.04) rotate(2deg);
+  }
 }

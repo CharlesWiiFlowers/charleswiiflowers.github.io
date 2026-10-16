@@ -1,167 +1,59 @@
-.card {
-    background-color: #fcfbfe;
-    border-color: #fcfbfe;
-    border-radius: 20px;
-    max-width: 90%;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10%;
-    margin-top: 10%;
-    padding: 5px;
-    flex-wrap: wrap;
+.section-card {
+  background-color: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: clamp(1.4rem, 4vw, 2.6rem);
+  margin: 0 auto var(--space-section);
+  width: 100%;
+  scroll-margin-top: 5rem;
 }
+
+.section-head {
+  max-width: var(--max-prose);
+  margin-bottom: 1.6rem;
+}
+
+.kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+
+.section-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  color: var(--text);
+  text-align: left;
+}
+
+.section-subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  text-align: left;
+}
+
+.section-lede {
+  margin: 0.8rem 0 0;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  text-align: left;
+  max-width: var(--max-prose);
+}
+
+.section-body {
+  margin-top: 0.4rem;
+}
+
+/* Legacy inner layouts reused by toolkit / socials / projects */
 .div-image {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.skill-container {
-    position: relative;
-    transition: transform 0.1s ease-in-out;
-}
-
-.skill-container:hover {
-    transform: scale(1.5);
-    z-index: 10;
-}
-
-.skill-name {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #1d1135;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    pointer-events: none;
-    opacity: 0;
-    transition:opacity 0.2s ease-in-out;
-}
-
-.skill-container:hover .skill-name {
-    opacity: 1;
-}
-
-.skill-image {
-    height: 60px;
-    width: 60px;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-.div-children {
-    margin-bottom: 20px;
-    justify-content: center;
-}
-
-.div-social {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-item {
-    transition: transform 0.3s ease-in-out;
-}
-
-.social-item:hover {
-    transform: scale(1.2);
-}
-
-.div-project {
-    max-width: 300px;
-    justify-content: center;
-    align-content: center;
-}
-
-.div-image-project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.image-project {
-    align-content: center;
-    height: 300px;
-    width: 300px;
-    border-radius: 30px;
-}
-
-.project-title-text {
-    font-size: 30px;
-    color: #FCA311;
-}
-
-.project-content-text {
-    font-size: 20px;
-    color: #14213D;
-}
-
-.tags {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
-
-.item-tag {
-    display: flex;
-    width: 40%;
-    margin-right: 10px;
-    background-color: #14213D;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.item-tag-name {
-    color: #E5E5E5;
-}
-
-@media (min-width: 800px) {
-    .card {
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;   
-        padding: 10px;
-    }
-    
-    /*.card-children {
-    
-    }*/
-    .skill-image {
-        height: 70px;
-        width: 70px;
-        margin-left: 4px;
-        margin-right: 4px;
-    }
-
-    .div-project {
-        max-width: 100%;
-        width: fit-content;
-        flex-wrap: wrap;
-        overflow: auto;
-    }
-
-    .div-project-inside-link {
-        max-width: 500px;
-        margin-right: 30px;
-        margin-left: 30px;
-        margin-top: 10px;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .div-project-inside-link:hover {
-        transform: scale(1.03);
-    }
-    
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.9rem;
 }

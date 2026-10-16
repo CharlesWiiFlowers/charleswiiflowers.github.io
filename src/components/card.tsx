@@ -1,24 +1,29 @@
-import "./card.css"
+import "./card.css";
+import type { ReactNode } from "react";
 
-function Card({title, subtitle, content, children}: {title:string, subtitle:string,content:string, children?:React.ReactNode}){
-    return (
-        <div  className="card">
-            <div>
-                <h1>
-                    {title}
-                </h1>
-                <h2>
-                    {subtitle}
-                </h2>
-                <p>
-                    {content}
-                </p>
-            </div>
-            <div className='div-children'>
-                {children && <div className="card-children">{children}</div>}
-            </div>
-        </div>
-    )
+interface CardProps {
+  id?: string;
+  kicker?: string;
+  title: string;
+  subtitle?: string;
+  content?: string;
+  children?: ReactNode;
 }
 
-export default Card
+function Card({ id, kicker, title, subtitle = "", content = "", children }: CardProps) {
+  return (
+    <section id={id} className="section-card" aria-labelledby={id ? `${id}-title` : undefined}>
+      <div className="section-head">
+        {kicker && <p className="kicker">{kicker}</p>}
+        <h2 id={id ? `${id}-title` : undefined} className="section-title">
+          {title}
+        </h2>
+        {subtitle && <p className="section-subtitle">{subtitle}</p>}
+        {content && <p className="section-lede">{content}</p>}
+      </div>
+      {children && <div className="section-body">{children}</div>}
+    </section>
+  );
+}
+
+export default Card;

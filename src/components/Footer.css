@@ -1,0 +1,14 @@
+.site-footer {
+  width: 100%;
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 1.4rem 1rem 1.8rem;
+  margin-top: auto;
+}
+
+.footer-line {
+  margin: 0.2rem 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}

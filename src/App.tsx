@@ -1,47 +1,117 @@
-import Card from './components/card.tsx';
-import ProfileCard from './components/ProfileCard.tsx';
-import SkillCard from './components/SkillCard.tsx';
-import SocialCard from './components/SocialCard.tsx';
-import ProjectCard from './components/ProjectCard.tsx';
-import ParticlesBg from './components/ParticlesBg.tsx';
-import NavBar from './components/NavBar.tsx';
-import Footer from './components/Footer.tsx';
-import data from "./assets/data.json"
+import { useCallback, useEffect, useState } from "react";
+import Card from "./components/card.tsx";
+import ProfileCard from "./components/ProfileCard.tsx";
+import SkillCard, { type SkillItem } from "./components/SkillCard.tsx";
+import SocialCard, { type SocialItem } from "./components/SocialCard.tsx";
+import ProjectCard, { type ProjectItem } from "./components/ProjectCard.tsx";
+import ParticlesBg from "./components/ParticlesBg.tsx";
+import NavBar from "./components/NavBar.tsx";
+import Footer from "./components/Footer.tsx";
+import { useTheme } from "./hooks/useTheme.ts";
+import data from "./assets/data.json";
+import "./App.css";
 
-function InfoBody() {
-    return (
-        <div>
-            < ProfileCard title={data.name} subtitle='A software developer' avatarUrl={data['avatar-url']} />
-            < Card title='About me' subtitle='' content={data['about-me']} />
-            < SkillCard title='My skills' data={data['skill-list']} />
-            < ProjectCard title='My project' data={data['project-list']} />
-            < SocialCard title='My socials' data={data['social-media']} />
-        </div>)
+const PARTICLES_KEY = "cosmic-place-particles";
+
+function initialParticlesEnabled(): boolean {
+  try {
+    const stored = localStorage.getItem(PARTICLES_KEY);
+    if (stored === "on") {
+      return true;
+    }
+    if (stored === "off") {
+      return false;
+    }
+  } catch {
+    /* storage unavailable — fall through to media query default */
+  }
+  if (typeof window !== "undefined" && window.matchMedia) {
+    // Respect reduced-motion by default; the user can still opt back in.
+    return !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+  return true;
 }
 
-function SwitchHeader() {
-    return <div>
-        <NavBar ></NavBar>
-    </div>
+function useParticles() {
+  const [enabled, setEnabled] = useState<boolean>(initialParticlesEnabled);
+  useEffect(() => {
+    try {
+      localStorage.setItem(PARTICLES_KEY, enabled ? "on" : "off");
+    } catch {
+      /* storage unavailable — preference applies for this session only */
+    }
+  }, [enabled]);
+  const toggle = useCallback(() => setEnabled((prev) => !prev), []);
+  return { enabled, toggle };
 }
 
-function ContentPage() {
-    return (
-        <div>
-            < SwitchHeader />
-            < InfoBody />
-        </div>
-    )
+interface PortfolioData {
+  name: string;
+  "about-me": string;
+  "avatar-url": string;
+  "skill-list": SkillItem[];
+  "social-media": SocialItem[];
+  "project-list": ProjectItem[];
+  "currently-exploring"?: string[];
 }
 
-function BodyPage() {
-    return (
-        <div>
-            < ContentPage />
-        </div>
-    )
+const portfolio = data as PortfolioData;
+
+function NowSection({ items }: { items: string[] }) {
+  if (items.length === 0) {
+    return null;
+  }
+  return (
+    <Card id="now" kicker="Now" title="Currently exploring" content="">
+      <ul className="now-list">
+        {items.map((item) => (
+          <li key={item} className="now-item">
+            <span className="now-dot" aria-hidden="true">
+              ✦
+            </span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </Card>
+  );
 }
 
 export default function App() {
-    return (<div>< ParticlesBg color='#000000' />< BodyPage />< Footer /></div>);
+  const { preference, resolved, setPreference } = useTheme();
+  const { enabled: particlesEnabled, toggle: toggleParticles } = useParticles();
+
+  const particleColor = resolved === "light" ? "#6d5bd0" : "#cfc6ff";
+  const linkColor = resolved === "light" ? "#a89bd8" : "#8f83d8";
+
+  return (
+    <div className="app-shell">
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <ParticlesBg particleColor={particleColor} linkColor={linkColor} enabled={particlesEnabled} />
+      <NavBar
+        theme={preference}
+        onThemeChange={setPreference}
+        particlesEnabled={particlesEnabled}
+        onToggleParticles={toggleParticles}
+      />
+      <main id="main" className="page">
+        <ProfileCard
+          name="Carlos “Flowers”"
+          role="Software developer · desktop, microcontrollers & the web"
+          tagline="I build software and tinker with electronics and robotics, driven by curiosity about science and space. Off the keyboard: music, art, anime and platformer games."
+          avatarUrl={portfolio["avatar-url"]}
+          location="Orion Arm of the Milky Way · a planet commonly called Earth 🌎"
+          interests={["Software", "Robotics", "Electronics", "Space & science", "Music & art", "Anime & games"]}
+        />
+        <ProjectCard title="Projects" data={portfolio["project-list"]} />
+        <Card id="about" kicker="About" title="About me" content={portfolio["about-me"]} />
+        <SkillCard title="Toolkit" data={portfolio["skill-list"]} />
+        <NowSection items={portfolio["currently-exploring"] ?? []} />
+        <SocialCard title="Elsewhere" data={portfolio["social-media"]} />
+      </main>
+      <Footer />
+    </div>
+  );
 }

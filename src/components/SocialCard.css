@@ -1,0 +1,73 @@
+.social-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .social-link:hover {
+    border-color: var(--accent);
+    transform: translateX(3px);
+  }
+}
+
+.social-link:hover {
+  color: var(--text);
+}
+
+.social-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Some brand marks are dark-on-transparent: give them a chip so they stay
+   visible on the dark theme without editing the source images. */
+html[data-theme="dark"] .social-icon[src$=".svg"],
+html[data-theme="dark"] .social-icon[src*="x_logo"],
+html[data-theme="dark"] .social-icon[src*="github-mark"] {
+  background: #f2eefc;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.social-text {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.social-name {
+  font-weight: 650;
+}
+
+.social-hint {
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+@media (min-width: 700px) {
+  .social-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
