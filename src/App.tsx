@@ -7,7 +7,7 @@ import ProjectCard, { type ProjectItem } from "./components/ProjectCard.tsx";
 import ParticlesBg from "./components/ParticlesBg.tsx";
 import NavBar from "./components/NavBar.tsx";
 import Footer from "./components/Footer.tsx";
-import TacoEasterEgg from "./components/TacoEasterEgg.tsx";
+import AmbientField from "./ambient/AmbientField.tsx";
 import { useTheme } from "./hooks/useTheme.ts";
 import data from "./assets/data.json";
 import "./App.css";
@@ -107,7 +107,7 @@ export default function App() {
         <SocialCard title="Elsewhere" data={portfolio["social-media"]} />
       </main>
       <Footer />
-      <TacoEasterEgg />
+      <AmbientField />
     </div>
   );
 }

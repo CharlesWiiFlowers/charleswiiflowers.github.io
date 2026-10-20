@@ -1,0 +1,136 @@
+/* Shared primitives for every ambient object. Kept deliberately small: the
+   system supplies positioning, motion layering and popover chrome; each object
+   supplies only its own artwork and content. Theme tokens come from index.css,
+   so ambient objects are readable in both light and dark themes. */
+
+.ambient-field {
+  position: fixed;
+  inset: 0;
+  z-index: 900; /* above page content, below the sticky navbar (1000) */
+  pointer-events: none; /* only interactive children opt back in */
+}
+
+/* One drifting / anchored object. Position is written from JS as a transform;
+   `width`/`height` come from the object's own size via inline style. */
+.ambient-object {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+/* Rotation layer, driven from JS alongside the translate on the root. */
+.ambient-object__motion {
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 12s;
+}
+
+.ambient-object__trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* The object's own root. It only needs to fill the system's motion layer. */
+.ambient-object__scope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ambient-object__trigger:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+/* Decorative accent: a soft shadow + gentle bob, opt-in per object. */
+.ambient-object--shadow .ambient-object__trigger {
+  filter: drop-shadow(0 3px 6px rgba(2, 0, 20, 0.35));
+}
+
+.ambient-object--lift .ambient-object__trigger {
+  animation: ambient-lift 7s ease-in-out infinite;
+}
+
+@keyframes ambient-lift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* Popover / tooltip: themed card that floats above (or below) its object. */
+.ambient-object__popover {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(240px, calc(100vw - 24px));
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.ambient-object__popover--below {
+  bottom: auto;
+  top: calc(100% + 10px);
+}
+
+.ambient-object__popover-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ambient-object__popover-action {
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+/* Object artwork: gentle scale-up on hover. */
+.ambient-object__art {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.ambient-object__trigger:hover .ambient-object__art {
+  transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-object--lift .ambient-object__trigger {
+    animation: none;
+  }
+
+  .ambient-object,
+  .ambient-object__motion {
+    transition: none;
+  }
+
+  .ambient-object__art {
+    transition: none;
+  }}
